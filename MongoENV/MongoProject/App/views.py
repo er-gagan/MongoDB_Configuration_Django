@@ -1,5 +1,5 @@
 from django.http.response import HttpResponse
-from django.shortcuts import redirect, render
+from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 from .models import Student
 # Create your views here.
