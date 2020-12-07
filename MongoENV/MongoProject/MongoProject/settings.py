@@ -40,6 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'App',
+    # 'django_mongoengine',
+    # 'django_mongoengine.mongo_auth',
+    # 'django_mongoengine.mongo_admin',
+    # 'rest_framework_mongoengine',
 ]
 
 MIDDLEWARE = [
@@ -76,12 +80,26 @@ WSGI_APPLICATION = 'MongoProject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         # 'NAME': BASE_DIR / 'db.sqlite3',
+#         'NAME': str(BASE_DIR / 'db.sqlite3'),
+
+#     }
+# }
+
+# MONGODB_DATABASES = {
+#     'default': {'name': 'Gagan'}
+# }
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+      'default': {
+          'ENGINE': 'djongo',
+          'NAME': 'Gagan',
+      }
+  }
+
 
 
 # Password validation
